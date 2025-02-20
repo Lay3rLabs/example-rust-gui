@@ -112,6 +112,12 @@ show-result:
 _build_forge:
 	@forge build
 
+frontend-dev:
+	@cd frontend && RUSTFLAGS='--cfg getrandom_backend="wasm_js"' trunk serve --watch .
+
+frontend-build:
+	@cd frontend && RUSTFLAGS='--cfg getrandom_backend="wasm_js"' trunk build --release
+
 # Declare phony targets
 .PHONY: build clean fmt bindings test
 

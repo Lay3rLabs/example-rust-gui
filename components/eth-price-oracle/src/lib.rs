@@ -1,4 +1,5 @@
 mod trigger;
+use shared::price_feed::PriceFeedData;
 use trigger::{decode_trigger_event, encode_trigger_output, Destination};
 use wavs_wasi_chain::http::{fetch_json, http_request_get};
 pub mod bindings;
@@ -71,12 +72,6 @@ async fn get_price_feed(id: u64) -> Result<PriceFeedData, String> {
     })
 }
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct PriceFeedData {
-    symbol: String,
-    timestamp: String,
-    price: f64,
-}
 
 /// -----
 /// https://transform.tools/json-to-rust-serde
