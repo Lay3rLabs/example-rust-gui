@@ -6,7 +6,7 @@ Some [code is shared](./shared/) between the [Component](./components/eth-price-
 
 You have a choice of using Metamask, Anvil, or a Mnemonic for your wallet (via dropdown in the GUI)
 
-Metamask support is actually via [viem])(https://viem.sh/), so other wallets could be supported just as easily.
+Metamask support is actually via [viem](https://viem.sh/), so other wallets could be supported just as easily.
 
 # Getting started
 
